@@ -1,23 +1,22 @@
 % script for plotting sp
-figure;
+function [sp_plot] = plot_sp( patch_name, real_data, imaged_data, matched_data )
+    
+    % generate a new figure, and keep all the plots there
+    figure;
+    hold on;
+    
+    % rows from 380 to 730
+    spectrums = 380:10:730;
 
-% rows from 380 to 730
-spectrums = 380:10:730;
-hold on;
+    sp_plot = plot(spectrums, real_data, 'b-');
+    plot(spectrums, imaged_data, 'r-');
+    plot(spectrums, matched_data, 'm-');
 
-% read in data as these variables
-% real_data
-% imaged_data
-% matched_data
-% patch_name
+    title(patch_name);
 
-plot(spectrums, real_data, 'b-');
-plot(spectrums, imaged_data, 'r-');
-plot(spectrums, matched_data, 'p-');
+    xlabel('wavelength')
+    ylabel('relative energy')
 
-title(patch_name);
-
-xlabel('wavelength')
-ylabel('relative energy')
-
-legend('real','imaged','matched','Location','NorthEast');
+    legend('real','imaged','matched','Location','NorthEast');
+    hold off;
+end
