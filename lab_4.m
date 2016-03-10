@@ -1,22 +1,29 @@
-%%  THIS IS STEP 5
-cie = loadCIEData;
+%% Lab 4
+% Created by Jesse Jurman (jrj2703) and Michael Timbrook (mpt2360)
 
-CC_spectra = importdata('ColorChecker_380_780_5nm.txt');
-CC_XYZs = ref2XYZ(CC_spectra(:,2:25), cie.cmf2deg, cie.illD65); 
+%% Step 2, load in CIE data as a structure
+cie = loadCIEdata;
+cie
 
-%%  THIS IS STEP 8
+%% Step 3, testing our CIE data with blackbody plotting
+BlackbodyAndStandardIlluminantSpectra
+dbtype('BlackbodyAndStandardIlluminantSpectra')
 
-st_real = import_sp('colormonki/silent_tide_real.sp') / 100;
-st_imaged = import_sp('colormonki/mac/mac_silent_tide_screen.sp') / 100;
-st_matching = import_sp('colormonki/mac/mac_silent_tide_matching.sp') / 100;
+%% Step 3, testing out CIE data with CMF plotting
+CIEStandardObserverCMF
+dbtype('CIEStandardObserverCMF')
 
-tm_real = import_sp('colormonki/teal_mosaic_real.sp') / 100;
-tm_matching = import_sp('colormonki/mac/mac_teal_mosaic_matching.sp') / 100;
-tm_imaged = import_sp('colormonki/mac/mac_teal_mosaic_screen.sp') / 100;
+%% Step 4, building ref2XYZ
+dbtype('ref2XYZ')
 
-cie = loadCIEData;
+%% Step 5, testing the ref2XYZ with the ColorChecker chart
+dbtype('ColorChecker_380_780_5nm_XYZ');
 
-ref_lambda = 380:10:730;
-matching = ismember(cie.lambda, ref_lambda);
+%% Step 6, building the XYZ2xyY
+dbtype('XYZ2xyY');
 
-ref2XYZ(st_real', cie.cmf2deg(matching), cie.illD65(matching))
+%% Step 7, testing the XYZ2xyY with the ColorChecker chart
+dbtype('ColorChecker_380_780_5nm_xyY');
+
+%% Step 8, loading the CIE and illuminant data for our color patches
+dbtype('load_patch_CIE_ill_data');
