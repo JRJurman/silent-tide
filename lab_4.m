@@ -13,17 +13,21 @@ dbtype('BlackbodyAndStandardIlluminantSpectra')
 CIEStandardObserverCMF
 dbtype('CIEStandardObserverCMF')
 
-%% Step 4, building ref2XYZ
+%% Step 4, building _ref2XYZ_
 dbtype('ref2XYZ')
 
-%% Step 5, testing the ref2XYZ with the ColorChecker chart
+%% Step 5, testing the _ref2XYZ_ with the ColorChecker chart
+ColorChecker_380_780_5nm_XYZ
 dbtype('ColorChecker_380_780_5nm_XYZ');
 
-%% Step 6, building the XYZ2xyY
+%% Step 6, building the _XYZ2xyY_
 dbtype('XYZ2xyY');
 
-%% Step 7, testing the XYZ2xyY with the ColorChecker chart
+%% Step 7, testing the _XYZ2xyY_ with the ColorChecker chart
+ColorChecker_380_780_5nm_xyY
 dbtype('ColorChecker_380_780_5nm_xyY');
 
 %% Step 8, loading the CIE and illuminant data for our color patches
+% note, _import_sp_ is a matlab generated function to pull our data
+load_patch_CIE_ill_data
 dbtype('load_patch_CIE_ill_data');
