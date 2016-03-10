@@ -31,3 +31,7 @@ dbtype('ColorChecker_380_780_5nm_xyY');
 % note, _import_sp_ is a matlab generated function to pull our data
 load_patch_CIE_ill_data
 dbtype('load_patch_CIE_ill_data');
+
+%% Step 12, Visualize patch data on chromiticity chart
+add_patch_to_chrom_diag
+dbtype('add_patch_to_chrom_diag');
