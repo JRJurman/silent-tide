@@ -32,6 +32,26 @@ dbtype('ColorChecker_380_780_5nm_xyY');
 load_patch_CIE_ill_data
 dbtype('load_patch_CIE_ill_data');
 
-%% Step 12, Visualize patch data on chromiticity chart
+%% Step 9, graph our interpolated data on graphs
+interp_patch_graphs
+dbtype('interp_patch_graphs');
+
+%% Step 10, chart of tristimulus values
+% note, these values seemed to be extremely off, and may result in further
+% inconsistencies.
+% 
+% <<tristimulus_excel.png>>
+% 
+
+
+%% Step 11, chart of chromaticity values
+% note, these values seemed to be extremely off, and similar to each other,
+% which led us to believe our XYZ2xyY function is broken, and leads to the
+% single point present in Step 12's chromaticity chart
+% 
+% <<chromaticity_excel.png>>
+% 
+
+%% Step 12, Visualize patch data on chromaticity chart
 add_patch_to_chrom_diag
 dbtype('add_patch_to_chrom_diag');
