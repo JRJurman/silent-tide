@@ -1,4 +1,4 @@
-function [ cie ] = loadCIEData()
+function [ cie ] = loadCIEdata()
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
