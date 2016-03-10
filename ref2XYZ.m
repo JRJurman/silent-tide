@@ -1,16 +1,11 @@
-function [ ret ] = ref2XYZ( refs, cmfs, illum )
-n_illum = illum / 100;
+function [ XYZ ] = ref2XYZ( refs, cmfs, illum )
 
-d = 5;
+% constant for normalization
+k = 100 ./ (cmfs(:,2)'*illum);
 
-cied = loadCIEdata;
+% compute XYZ
+% diag generates a diagonal matrix of the illuminant data
+XYZ = k.*cmfs'*diag(illum)*refs;
 
-k = 100 / sum(cmfs(:,2) .* n_illum * d);
-
-X = k * ((cmfs(:,1) .* n_illum)' * refs * d);
-Y = k * ((cmfs(:,2) .* n_illum)' * refs * d);
-Z = k * ((cmfs(:,3) .* n_illum)' * refs * d);
-
-ret = [X; Y; Z];
 end
 
