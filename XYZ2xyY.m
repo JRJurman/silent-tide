@@ -5,5 +5,6 @@ y = XYZ(2,:) ./ sum(XYZ);
 Y = XYZ(2,:);
 
 xyY = [x; y; Y];
+
 end
 
