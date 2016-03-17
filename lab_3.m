@@ -1,4 +1,4 @@
-%% Lab 4
+%% Lab 3
 % Created by Jesse Jurman (jrj2703) and Michael Timbrook (mpt2360)
 
 %% Step 2, load in CIE data as a structure
