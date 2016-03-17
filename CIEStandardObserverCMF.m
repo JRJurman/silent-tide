@@ -6,15 +6,15 @@ figure;
 hold on;
 spectrums = cied.lambda;
 
-girth = 1.5;
+width = 1.5;
 
-plot(spectrums, cied.cmf2deg(:,1), 'r-', 'LineWidth', girth);
-plot(spectrums, cied.cmf2deg(:,2), 'g-', 'LineWidth', girth);
-plot(spectrums, cied.cmf2deg(:,3), 'b-', 'LineWidth', girth);
+plot(spectrums, cied.cmf2deg(:,1), 'r-', 'LineWidth', width);
+plot(spectrums, cied.cmf2deg(:,2), 'g-', 'LineWidth', width);
+plot(spectrums, cied.cmf2deg(:,3), 'b-', 'LineWidth', width);
 
-plot(spectrums, cied.cmf10deg(:,1), 'r--', 'LineWidth', girth);
-plot(spectrums, cied.cmf10deg(:,2), 'g--', 'LineWidth', girth);
-plot(spectrums, cied.cmf10deg(:,3), 'b--', 'LineWidth', girth);
+plot(spectrums, cied.cmf10deg(:,1), 'r--', 'LineWidth', width);
+plot(spectrums, cied.cmf10deg(:,2), 'g--', 'LineWidth', width);
+plot(spectrums, cied.cmf10deg(:,3), 'b--', 'LineWidth', width);
 
 title('CIE Standard Observer CMF');
 

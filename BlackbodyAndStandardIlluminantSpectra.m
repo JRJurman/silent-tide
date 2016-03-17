@@ -1,7 +1,7 @@
 % script for plotting blackbody curves
 figure;
 hold on;
-girth = 1.5;
+width = 1.5;
 
 cieData = loadCIEdata;
 
@@ -10,13 +10,13 @@ bb2856_data = blackbody([2856], cieData.lambda);
 bb5003_data = blackbody([5003], cieData.lambda);
 bb6504_data = blackbody([6504], cieData.lambda);
 
-bb_plot = plot(cieData.lambda, bb2856_data, 'k-', 'lineWidth', girth);
-plot(cieData.lambda, bb5003_data, 'r-', 'lineWidth', girth);
-plot(cieData.lambda, bb6504_data, 'b-', 'lineWidth', girth);
+bb_plot = plot(cieData.lambda, bb2856_data, 'k-', 'lineWidth', width);
+plot(cieData.lambda, bb5003_data, 'r-', 'lineWidth', width);
+plot(cieData.lambda, bb6504_data, 'b-', 'lineWidth', width);
 
-plot(cieData.lambda, cieData.illA/100, 'k--', 'lineWidth', girth);
-plot(cieData.lambda, cieData.illD50/100, 'r--', 'lineWidth', girth);
-plot(cieData.lambda, cieData.illD65/100, 'b--', 'lineWidth', girth);
+plot(cieData.lambda, cieData.illA/100, 'k--', 'lineWidth', width);
+plot(cieData.lambda, cieData.illD50/100, 'r--', 'lineWidth', width);
+plot(cieData.lambda, cieData.illD65/100, 'b--', 'lineWidth', width);
 
 title('blackbody and standard illuminant spectra');
 
