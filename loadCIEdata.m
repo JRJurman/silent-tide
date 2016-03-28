@@ -1,29 +1,31 @@
-function [ cie ] = loadCIEdata()
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+function [cie] = loadCIEdata
+% loadCIEdata.m
+% load CIE data into a structure
+% 3/16/16 jaf
 
-cie2deg = load('CIE_data/CIE_2Deg_380-780-5nm.txt');
-cie10deg = load('CIE_data/CIE_10Deg_380-780-5nm.txt');
+%set the wavelength range
+cie.lambda = [380:5:780];
 
-cie2t = cie2deg';
-cie10t = cie10deg';
+%load the CIE color matching function data
+cie.cmf2deg = load('CIE_data/CIE_2Deg_380-780-5nm.txt');
+cie.cmf10deg = load('CIE_data/CIE_10Deg_380-780-5nm.txt');
 
-cie.lambda = cie2t(1,:);
-cie.cmf2deg = cie2t(2:end,:)';
-cie.cmf10deg = cie10t(2:end,:)';
+% load the CIE illuminant data
 cie.illA = load('CIE_data/CIE_IllA_380-780-5nm.txt');
-cie.illA = cie.illA(:,2);
 cie.illC = load('CIE_data/CIE_IllC_380-780-5nm.txt');
-cie.illC = cie.illC(:,2);
 cie.illD50 = load('CIE_data/CIE_IllD50_380-780-5nm.txt');
-cie.illD50 = cie.illD50(:,2);
 cie.illD65 = load('CIE_data/CIE_IllD65_380-780-5nm.txt');
-cie.illD65 = cie.illD65(:,2);
-cie.illE = ones(1,81) * 100;
+cie.illE = ones(length(cie.lambda),1);
 cie.illF = load('CIE_data/CIE_IllF_1-12_380-780-5nm.txt');
-cie.illF = cie.illF(:,2:end);
 cie.eigD = load('CIE_data/CIE_eigD_380-780-5nm.txt');
-cie.eigD = cie.eigD(:,2:end);
 
-end
-
+% interpolate the data over the range and spacing of cie.lambda
+interpMethod = 'linear';
+cie.cmf2deg = interp1(cie.cmf2deg(:,1),cie.cmf2deg(:,2:end),cie.lambda(:),interpMethod);
+cie.cmf10deg = interp1(cie.cmf10deg(:,1),cie.cmf10deg(:,2:end),cie.lambda(:),interpMethod);
+cie.illA = interp1(cie.illA(:,1),cie.illA(:,2:end),cie.lambda(:),interpMethod);
+cie.illC = interp1(cie.illC(:,1),cie.illC(:,2:end),cie.lambda(:),interpMethod);
+cie.illD50 = interp1(cie.illD50(:,1),cie.illD50(:,2:end),cie.lambda(:),interpMethod);
+cie.illD65 = interp1(cie.illD65(:,1),cie.illD65(:,2:end),cie.lambda(:),interpMethod);
+cie.illF = interp1(cie.illF(:,1),cie.illF(:,2:end),cie.lambda(:),interpMethod);
+cie.eigD = interp1(cie.eigD(:,1),cie.eigD(:,2:end),cie.lambda(:),interpMethod);
