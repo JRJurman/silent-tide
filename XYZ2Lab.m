@@ -9,6 +9,7 @@ L = 116*f(Y/Yn)-16;
 a = 500*(f(X/Xn)-f(Y/Yn));
 b = 200*(f(Y/Yn)-f(Z/Zn));
 
+Lab = [L;a;b];
 end
 
 function [x] = f(x)

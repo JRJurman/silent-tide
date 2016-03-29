@@ -11,3 +11,5 @@ dbtype('ColorChecker_380_780_5nm_XYZ');
 
 %% Step 4, create the XYZ2Lab function
 dbtype('XYZ2Lab')
+
+%% Step 5, test XYZ2Lab using the ColorChecker Chart
