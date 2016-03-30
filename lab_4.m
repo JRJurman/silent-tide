@@ -13,3 +13,12 @@ dbtype('ColorChecker_380_780_5nm_XYZ');
 dbtype('XYZ2Lab')
 
 %% Step 5, test XYZ2Lab using the ColorChecker Chart
+
+%% Step 6, test simulated low energy specta
+ColorChecker_low_spec
+dbtype('ColorChecker_low_spec');
+
+%% Step 7, DEab
+ColorChecker_CIELAB
+DEab(CC_Labs, CC_Labs.*0.2)
+dbtype('DEab');
