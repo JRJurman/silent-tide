@@ -10,7 +10,7 @@ ColorChecker_380_780_5nm_XYZ
 dbtype('ColorChecker_380_780_5nm_XYZ');
 
 %% Step 4, create the XYZ2Lab function
-dbtype('XYZ2Lab')
+dbtype('XYZ2Lab');
 
 %% Step 5, test XYZ2Lab using the ColorChecker Chart
 ColorChecker_CIELAB
@@ -29,3 +29,10 @@ dbtype('DEab_ColorChecker_MetaChecker');
 
 %% Step 9, use the XYZ2Lab to calculate CIELAB values for the Project 3 patches
 dbtype('patch_CIELAB');
+
+%% Step 10, Calculating deltaE for color patches
+patch_deltaEab
+dbtype('patch_deltaEab');
+
+%% Step 11, create figure of XYZ, Lab and dE for patches
+
