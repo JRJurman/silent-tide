@@ -12,13 +12,7 @@ CC_Labs = XYZ2Lab(CC_XYZs, XYZn_D65);
 
 % read in the names of the ColorChecker patches
 names = textread('ColorChecker_names.txt','%s','delimiter','|');
-nameSize = size(names);
-numberOfPatches = nameSize(1);
 
-% print the patch data
-fprintf('ColorChecker XYZ and Lab values (D65 illuminant and 2 deg. observer)\n\n');
-fprintf('Patch #\tX\tY\tZ\tL*\ta*\tb*\tPatchName\n');
+title = 'ColorChecker XYZ and Lab values (D65 illuminant and 2 deg. observer)';
 
-for i = 1:numberOfPatches
-    fprintf('%2.0f\t%2.3f\t%2.3f\t%2.3f\t%2.3f\t%2.3f\t%2.3f\t%s\n', i, CC_XYZs(1,i), CC_XYZs(2,i), CC_XYZs(3,i), CC_Labs(1,i), CC_Labs(2,i), CC_Labs(3,i), names{i});
-end
+printXYZLabTable(title, CC_XYZs, CC_Labs, names);
