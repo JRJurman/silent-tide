@@ -34,7 +34,20 @@ dbtype('patch_CIELAB');
 dbtype('patch_deltaEab');
 
 %% Step 11, create figure of XYZ, Lab and dE for patches
+%%
+% 
+% <<../table_lab_4.png>>
+% 
+
 
 %% Step 12, plot the patch real, imaged, and matched data
 graph_patch_a_b
 dbtype('patch_deltaEab');
+
+%% Step 13, feedback
+% Overall our comfort level with matlab has gotten much better, and we found this lab quite trivial except for fprintf. We had a lot of difficulty getting tabbing to work consistently across platforms and in publish the tabbing didn't even work.
+%%
+% 
+% <<../tabbing.png>>
+% 
+
