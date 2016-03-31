@@ -26,3 +26,6 @@ dbtype('DEab');
 %% Step 8, test the DEab function using the ColorChecker and MetaChecker spectra
 DEab_ColorChecker_MetaChecker
 dbtype('DEab_ColorChecker_MetaChecker');
+
+%% Step 9, use the XYZ2Lab to calculate CIELAB values for the Project 3 patches
+dbtype('patch_CIELAB');
