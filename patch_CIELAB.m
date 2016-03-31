@@ -7,7 +7,7 @@ XYZn_D50 = ref2XYZ(cie.illE,cie.cmf2deg,cie.illD50);
 % this script loads into the workspace:
 %   st_real_XYZ, st_imaged_XYZ, st_matching_XYZ
 %   tm_real_XYZ, tm_imaged_XYZ, tm_matching_XYZ
-load_patch_CIE_ill_data
+load_patch_CIE_ill_data;
 
 % compute the Labs
 st_real_Labs = XYZ2Lab(st_real_XYZ, XYZn_D50);

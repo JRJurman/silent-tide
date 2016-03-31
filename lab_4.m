@@ -31,8 +31,10 @@ dbtype('DEab_ColorChecker_MetaChecker');
 dbtype('patch_CIELAB');
 
 %% Step 10, Calculating deltaE for color patches
-patch_deltaEab
 dbtype('patch_deltaEab');
 
 %% Step 11, create figure of XYZ, Lab and dE for patches
 
+%% Step 12, plot the patch real, imaged, and matched data
+graph_patch_a_b
+dbtype('patch_deltaEab');

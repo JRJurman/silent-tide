@@ -1,5 +1,5 @@
 % Loading patch data (includes Lab)
-patch_CIELAB
+patch_CIELAB;
 
 % image dE's for Slient Tide, then Teal Mosaic
 st_imaged_de = DEab(st_real_Labs, st_imaged_Labs);
