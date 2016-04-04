@@ -1,8 +1,6 @@
 % Constants for all the crop regions for the color checker chart.
 
 color_patch_crop = imread('imgs_timbrook/color_patch_crop.jpeg');
-% imshow(color_patch_crop);
-% hold on;
 width = 350;
 xs = linspace(258,2682, 6) - (width / 2);
 ys = linspace(245, 1675, 4) - (width / 2);
@@ -23,8 +21,14 @@ for idx = 1:24
     means(idx, :) = norm_mean;
 end
 
+figure('Position', [0, 0, 1500, 500]);
+subplot(1,2,1);
+title('Average RGB values');
 ni = reshape(means, [6 4 3]);
 image(fliplr(rot90(ni, 3)));
 
-
-% scatter(rx, ry, 20000, 'square', 'white');
+subplot(1,2,2);
+title('Original Image');
+imshow(color_patch_crop);
+% hold on;
+% scatter(ry + (width / 2), rx + (width / 2), 4500, 'square', 'white');
