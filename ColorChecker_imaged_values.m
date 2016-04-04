@@ -7,8 +7,8 @@ ys = linspace(245, 1675, 4) - (width / 2);
 
 [x, y] = meshgrid(ys, xs); % row col, x y
 
-rx = reshape(x, [24, 1]);
-ry = reshape(y, [24, 1]);
+rx = uint16(reshape(x, [24, 1]));
+ry = uint16(reshape(y, [24, 1]));
 
 means = zeros([24 3]);
 for idx = 1:24
@@ -29,6 +29,7 @@ image(fliplr(rot90(ni, 3)));
 
 subplot(1,2,2);
 title('Original Image');
-imshow(color_patch_crop);
-% hold on;
-% scatter(ry + (width / 2), rx + (width / 2), 4500, 'square', 'white');
+imshow(color_patch_crop);reshaped_means = flip(rot90(means));
+cam_rgbs = reshaped_means(:, 1:18)
+cam_gray_rgbs = reshaped_means(:, 19:24)
+
