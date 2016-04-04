@@ -26,5 +26,8 @@ end
 ni = reshape(means, [6 4 3]);
 image(fliplr(rot90(ni, 3)));
 
+reshaped_means = flip(rot90(means));
+cam_rgbs = reshaped_means(:, 1:18)
+cam_gray_rgbs = reshaped_means(:, 19:24)
 
 % scatter(rx, ry, 20000, 'square', 'white');
