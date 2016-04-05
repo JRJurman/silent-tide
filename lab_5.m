@@ -12,3 +12,7 @@ ColorChecker_imaged_values
 %% Step 4, getting the grey scale values.
 % <include>ColorPickerGreyScale.m</include>
 ColorPickerGreyScale
+
+%% Step 5, plotting the response curves
+% <include>CameraResponseCurve.m</include>
+CameraResponseCurve
