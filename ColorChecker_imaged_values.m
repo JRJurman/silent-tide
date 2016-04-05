@@ -36,9 +36,11 @@ image(fliplr(rot90(ni, 3)));
 
 subplot(1,2,2);
 title('Original Image');
-imshow(color_patch_crop);reshaped_means = flip(rot90(means));
-cam_rgbs = reshaped_means(:, 1:18);
-cam_gray_rgbs = reshaped_means(:, 19:24);
+imshow(color_patch_crop);
+
+colorchecker_means = flip(rot90(means));
+cam_rgbs = colorchecker_means;
+cam_gray_rgbs = colorchecker_means(:, 19:24);
 
 cam_gray_rgbs = fliplr(cam_gray_rgbs);
 

@@ -20,3 +20,6 @@ CameraResponseCurve
 %% Step 6 -> 7, Linearize the camera?s RGB output
 % <include>LinearizeCamera.m</include>
 LinearizeCamera
+%% Step 8, Linearize ColorChecker Chart
+% <include>LinearizeColorCheckerChart.m</include>
+LinearizeColorCheckerChart
