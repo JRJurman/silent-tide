@@ -16,3 +16,7 @@ ColorPickerGreyScale
 %% Step 5, plotting the response curves
 % <include>CameraResponseCurve.m</include>
 CameraResponseCurve
+
+%% Step 6 -> 7, Linearize the camera?s RGB output
+% <include>LinearizeCamera.m</include>
+LinearizeCamera
