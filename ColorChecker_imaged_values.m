@@ -29,14 +29,16 @@ for idx = 1:24
 end
 
 figure('Position', [0, 0, 1500, 500]);
+hold on;
 subplot(1,2,1);
-title('Average RGB values');
 ni = reshape(means, [6 4 3]);
-image(fliplr(rot90(ni, 3)));
+imshow(fliplr(rot90(ni, 3)));
+title('Average RGB values');
 
 subplot(1,2,2);
-title('Original Image');
 imshow(color_patch_crop);
+title('Original Image');
+
 colorchecker_means = flip(rot90(means));
 cam_rgbs = colorchecker_means;
 cam_gray_rgbs = colorchecker_means(:, 19:24);

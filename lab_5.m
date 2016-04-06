@@ -31,5 +31,18 @@ CamModel
 
 %% Step 11, Comparing cam XYZs to monki XYZs
 % <include>CamModelEvaluate.m</include>
+%
 % <<../camDE.png>>
 CamModelEvaluate
+
+%% Step 12, Creating a chart based off of XYZ
+% <include>ColorCheckerFromXYZ.m</include>
+ColorCheckerFromXYZ
+
+%% Step 13, save camera model
+% |save('camera_model.mat', 'cam_polys', 'cam_matrix');|
+save('camera_model.mat', 'cam_polys', 'cam_matrix');
+
+%% Step 14, Back to the patches
+% <include>PatchesFromCam.m</include>
+PatchesFromCam

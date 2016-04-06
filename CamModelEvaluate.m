@@ -1,3 +1,5 @@
+cie = loadCIEdata;
+
 munki_data = importdata('munki_CC_XYZs_Labs.txt');
 munki_XYZs = munki_data(:,2:4)';
 
