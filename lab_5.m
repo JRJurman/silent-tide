@@ -17,7 +17,7 @@ ColorPickerGreyScale
 % <include>CameraResponseCurve.m</include>
 CameraResponseCurve
 
-%% Step 6 -> 7, Linearize the camera?s RGB output
+%% Step 6 -> 7, Linearize the camera RGB output
 % <include>LinearizeCamera.m</include>
 LinearizeCamera
 
@@ -31,4 +31,5 @@ CamModel
 
 %% Step 11, Comparing cam XYZs to monki XYZs
 % <include>CamModelEvaluate.m</include>
+% <<../camDE.png>>
 CamModelEvaluate

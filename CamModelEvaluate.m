@@ -16,7 +16,5 @@ table(1:24, 2:4) = munki_Lab';
 table(1:24, 5:7) = cam_Lab';
 table(1:24, 8) = dEab';
 
-% Calulate mean min/max
-
 % Make nice table
-fprintf('%d\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n', table');
+% fprintf('%d\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n', table');
