@@ -45,4 +45,5 @@ save('camera_model.mat', 'cam_polys', 'cam_matrix');
 
 %% Step 14, Back to the patches
 % <include>PatchesFromCam.m</include>
+% <<../patchedeab.png>>
 PatchesFromCam
