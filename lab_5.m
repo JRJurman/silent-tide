@@ -30,4 +30,5 @@ LinearizeColorCheckerChart
 CamModel
 
 %% Step 11, Comparing cam XYZs to monki XYZs
-gs
+% <include>CamModelEvaluate.m</include>
+CamModelEvaluate

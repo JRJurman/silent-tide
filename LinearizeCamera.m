@@ -1,8 +1,4 @@
-ColorChecker_imaged_values;
-ColorPickerGreyScale;
-close all;
-
- r = 1; g = 2; b = 3;
+r = 1; g = 2; b = 3;
 % fit low-order polynomial functions between the camera gray rgbs
 % and the munki gray Ys
 cam_polys(r,:)=polyfit(cam_gray_rgbs(r,:),munki_gray_Ys,3);

@@ -1,7 +1,3 @@
-ColorChecker_imaged_values;
-LinearizeCamera;
-close all;
-
 figure('Position', [0, 0, 1500, 500]);
 hold on;
 

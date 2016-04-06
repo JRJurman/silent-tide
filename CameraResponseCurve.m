@@ -1,8 +1,3 @@
-% Load in data from previous steps
-ColorChecker_imaged_values;
-ColorPickerGreyScale;
-close all;
-
 figure;
 hold on;
 
