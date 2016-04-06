@@ -20,6 +20,14 @@ CameraResponseCurve
 %% Step 6 -> 7, Linearize the camera?s RGB output
 % <include>LinearizeCamera.m</include>
 LinearizeCamera
+
 %% Step 8, Linearize ColorChecker Chart
 % <include>LinearizeColorCheckerChart.m</include>
 LinearizeColorCheckerChart
+
+%% Step 9 -> 10, Create camera model
+% <include>CamModel.m</include>
+CamModel
+
+%% Step 11, Comparing cam XYZs to monki XYZs
+gs
