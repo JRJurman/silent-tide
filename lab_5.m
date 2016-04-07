@@ -45,5 +45,11 @@ save('camera_model.mat', 'cam_polys', 'cam_matrix');
 
 %% Step 14, Back to the patches
 % <include>PatchesFromCam.m</include>
-% <<../patchedeab.png>>
+% 
+% <<../patchdeab.png>>
+% 
 PatchesFromCam
+
+%% Step 15, Feedback
+% Overall this lab went well, and it was neat to see that both our cameras
+% created similar rgb values even though the images looked very off.
