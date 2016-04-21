@@ -3,5 +3,25 @@
 
 %% Step 1, 2, and 3
 % Download the project resources provided in myCourses to your working directory
-% Reading were taken off of Michel's Macbook Pro.
+% Reading were taken off of Michael's Macbook Pro.
+
+%% Step 4
+% Use the provided scripts to load the XYZ data for the ramps patch set
+run('.\colormonki\ramps\load_ramps_data_1516.m')
+
+%% Step 5
+% Build the forward display model
+% <include>forwardMatrix.m</include>
+% <include>buildForwardMatrix.m</include>
+
+%% Step 6, 7, 8
+% Build the forward lookup tables
+% <include>rampToLUT.m</include>
+% <include>buildFowardLUT.m</include>
+% Display the forward matrix and lookup table
+M_fwd
+% <include>plotLUT_fwd.m</include>
+
+
+
 
