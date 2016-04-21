@@ -29,3 +29,4 @@ cie.illD50 = interp1(cie.illD50(:,1),cie.illD50(:,2:end),cie.lambda(:),interpMet
 cie.illD65 = interp1(cie.illD65(:,1),cie.illD65(:,2:end),cie.lambda(:),interpMethod);
 cie.illF = interp1(cie.illF(:,1),cie.illF(:,2:end),cie.lambda(:),interpMethod);
 cie.eigD = interp1(cie.eigD(:,1),cie.eigD(:,2:end),cie.lambda(:),interpMethod);
+end

@@ -7,7 +7,7 @@
 
 %% Step 4
 % Use the provided scripts to load the XYZ data for the ramps patch set
-run('.\colormonki\ramps\load_ramps_data_1516.m')
+load_ramps_data_1516;
 
 %% Step 5
 % Build the forward display model
@@ -19,8 +19,13 @@ run('.\colormonki\ramps\load_ramps_data_1516.m')
 % <include>rampToLUT.m</include>
 % <include>buildFowardLUT.m</include>
 % Display the forward matrix and lookup table
+buildForwardMatrix;
 M_fwd
 % <include>plotLUT_fwd.m</include>
+plotLUT_fwd;
+
+%% Step 9
+% Test script to evaluate quality of forward model
 
 
 
