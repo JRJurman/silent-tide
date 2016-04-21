@@ -26,7 +26,5 @@ plotLUT_fwd;
 
 %% Step 9
 % Test script to evaluate quality of forward model
-
-
-
+test_forward_model_1516
 
