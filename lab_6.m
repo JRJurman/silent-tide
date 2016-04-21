@@ -28,3 +28,8 @@ plotLUT_fwd;
 % Test script to evaluate quality of forward model
 test_forward_model_1516
 
+%% Step 10 & 11
+% Building the reverse display model
+% <include>buildingDisplayModel.m</include>
+% <include>plotLUT_rev.m</include>
+buildingDisplayModel
