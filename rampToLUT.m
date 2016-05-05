@@ -19,14 +19,15 @@ function [ LUT_fwd ] = rampToLUT( rampXYZs, kXYZ, wXYZ, forwardMatrix, channelRo
     
     % get radiomatric scalars
     ramp_RS = normalizedXYZs*fwdMat;
-
+    ramp_RS = ramp_RS';
+    
     % define the 0-255 display values (digital counts) that correspond to 
     % the ramp values
     ramp_DCs = round(linspace(0,255,11));
     
     % interpolate the radiometric scalars across the full digital count 
     % range to form the forward LUTs
-    LUT_fwd = interp1(ramp_DCs,ramp_RS(:,1),[0:1:255],'spline');
+    LUT_fwd = interp1(ramp_DCs,ramp_RS(channelRow,:),0:1:255,'spline');
     
 end
 
