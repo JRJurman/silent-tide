@@ -30,14 +30,14 @@ end
 
 %figure('Position', [0, 0, 1500, 500]);
 %hold on;
-subplot(1,2,1);
+%subplot(1,2,1);
 ni = reshape(means, [6 4 3]);
 %imshow(fliplr(rot90(ni, 3)));
-title('Average RGB values');
+%title('Average RGB values');
 
-subplot(1,2,2);
+%subplot(1,2,2);
 %imshow(color_patch_crop);
-title('Original Image');
+%title('Original Image');
 
 colorchecker_means = flip(rot90(means));
 cam_rgbs = colorchecker_means;
