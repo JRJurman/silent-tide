@@ -3,6 +3,7 @@ buildForwardLUT
 
 M_rev = M_fwd(1:3, 1:3)^(1);
 
+
 % build the reverse LUT for the red, green, and blue channel
 RLUT_rev = round(interp1(RLUT_fwd, 0:255, linspace(0,max(RLUT_fwd),1024), 'spline', 0));
 GLUT_rev = round(interp1(GLUT_fwd, 0:255, linspace(0,max(GLUT_fwd),1024), 'spline', 0));
