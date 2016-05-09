@@ -12,7 +12,6 @@ ColorChecker_imaged_values;
 
 % scale them to 0 - 100
 cam_rgbs = cam_rgbs * 100;
-cam_gray_rgbs = cam_gray_rgbs * 100;
 
 tiTable(:,1) = 1:30;
 tiTable(1:24,2:4) = cam_rgbs';
