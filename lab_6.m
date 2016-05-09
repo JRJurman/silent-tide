@@ -33,3 +33,11 @@ test_forward_model_1516
 % <include>buildingDisplayModel.m</include>
 % <include>plotLUT_rev.m</include>
 buildingDisplayModel
+
+%% step 12 & 13
+% Plot reverse model LUT
+plotLUT_rev
+
+%% step 14
+% plot the camera CC image
+displayModelTest
