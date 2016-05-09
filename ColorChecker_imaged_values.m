@@ -28,15 +28,15 @@ for idx = 1:24
     means(idx, :) = norm_mean;
 end
 
-figure('Position', [0, 0, 1500, 500]);
-hold on;
+%figure('Position', [0, 0, 1500, 500]);
+%hold on;
 subplot(1,2,1);
 ni = reshape(means, [6 4 3]);
-imshow(fliplr(rot90(ni, 3)));
+%imshow(fliplr(rot90(ni, 3)));
 title('Average RGB values');
 
 subplot(1,2,2);
-imshow(color_patch_crop);
+%imshow(color_patch_crop);
 title('Original Image');
 
 colorchecker_means = flip(rot90(means));
@@ -45,5 +45,5 @@ cam_gray_rgbs = colorchecker_means(:, 19:24);
 
 cam_gray_rgbs = fliplr(cam_gray_rgbs);
 
-cam_rgbs
-cam_gray_rgbs
+cam_rgbs;
+cam_gray_rgbs;
