@@ -11,7 +11,7 @@ munki_XYZs_D65 = catBradford(munki_XYZs, XYZ_D50, XYZ_D65);
 
 adjusted_XYZs = bsxfun(@minus, munki_XYZs_D65', black_XYZ);
 
-final_RGB_lin = adjusted_XYZs*M_disp / 100;
+final_RGB_lin = adjusted_XYZs*M_disp' / 100;
 
 final_RGB_lin(final_RGB_lin>1.0) = 1.0;
 final_RGB_lin(final_RGB_lin<0.0) = 0.0;
