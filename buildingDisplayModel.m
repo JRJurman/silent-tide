@@ -1,7 +1,8 @@
 buildForwardMatrix
 buildForwardLUT
 
-M_rev = M_fwd(1:3, 1:3)^(1);
+M_rev = inv(M_fwd(:, 1:3));
+% fwdMat = inv(forwardMatrix(:,1:3)); %doing in rampToLUT
 
 
 % build the reverse LUT for the red, green, and blue channel

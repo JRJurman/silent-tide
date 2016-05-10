@@ -1,6 +1,6 @@
 cie = loadCIEdata;
 
-disp_XYZs = importdata('disp_model_test.ti3', ' ', 20);
+disp_XYZs = importdata('workflow_test_cal.ti3', ' ', 20);
 
 patches_XYZ = disp_XYZs.data(1:24, 5:7);
 

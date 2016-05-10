@@ -18,3 +18,5 @@ munki_XYZs = munki_data(:,2:4)';
 % calulate Labs
 munki_Lab = XYZ2Lab(munki_XYZs, cie.illD50);
 
+% calculate dEab
+error_dEabs = DEab(munki_Lab, patches_Lab);

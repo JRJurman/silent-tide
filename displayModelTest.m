@@ -16,6 +16,7 @@ final_RGB_lin(final_RGB_lin>1.0) = 1.0;
 final_RGB_lin(final_RGB_lin<0.0) = 0.0;
 
 scaled_RGB_lin = ceil(final_RGB_lin * 1024);
+scaled_RGB_lin(scaled_RGB_lin==0) = 1;
 
 rev_lut_disp = [RLUT_disp; GLUT_disp; BLUT_disp];
 

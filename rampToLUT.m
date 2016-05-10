@@ -15,7 +15,7 @@ function [ LUT_fwd ] = rampToLUT( rampXYZs, kXYZ, wXYZ, forwardMatrix, channelRo
     
     % the inverse of the primary 3x3 forward matrix
     fwdMat = inv(forwardMatrix(:,1:3));
-    
+
     % get radiomatric scalars
     ramp_RS = fwdMat*normalizedXYZs';
     
