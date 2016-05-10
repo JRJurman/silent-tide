@@ -1,4 +1,4 @@
-% evaluate the color error of an uncalibrated color imaging workflow
+% evaluate the color error of an calibrated color imaging workflow
 
 cie = loadCIEdata;
 XYZ_D50 = ref2XYZ(cie.illD50, cie.cmf10deg, cie.illD50);
