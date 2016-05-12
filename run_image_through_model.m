@@ -26,7 +26,7 @@ image_XYZs = cam_matrix * rgbs_lin;
 % remove blacks and run through rev model
 adjusted_XYZs = catBradford(image_XYZs, XYZ_D65, XYZ_D50);
 adjusted_XYZs = bsxfun(@minus, adjusted_XYZs', XYZk_disp);
-final_RGB_lin = (adjusted_XYZs * M_disp) / 100;
+final_RGB_lin = (adjusted_XYZs * M_disp') / 100;
 scaled_RGB_lin = ceil(final_RGB_lin * 1024);
 scaled_RGB_lin(scaled_RGB_lin<1) = 1;
 scaled_RGB_lin(scaled_RGB_lin>1024) = 1024;
