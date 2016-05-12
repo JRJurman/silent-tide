@@ -8,7 +8,7 @@ XYZ_D65 = ref2XYZ(cie.illD65, cie.cmf10deg, cie.illD65);
 image = imread('./imgs_timbrook/color_patch_crop.jpeg');
 
 [rows, cols, depth] = size(image);
-image_vector = double(reshape(image, [3, rows*cols]) + 1) / 255;
+image_vector = double(reshape(image, [3, rows*cols])) / 255;
 
 % Run values through camera model
 % use the functions to linearize the camera RGB data
@@ -17,11 +17,7 @@ rgbs_lin(red,:) = polyval(cam_polys(red,:),image_vector(red,:));
 rgbs_lin(green,:) = polyval(cam_polys(green,:),image_vector(green,:));
 rgbs_lin(blue,:) = polyval(cam_polys(blue,:),image_vector(blue,:));
 
-% clip out of range values 
-rgbs_lin(rgbs_lin<0) = 0;
-rgbs_lin(rgbs_lin>1) = 1;
-
-image_XYZs = cam_matrix * rgbs_lin;
+image_XYZs = cam_matrix * image_vector;
 
 % remove blacks and run through rev model
 adjusted_XYZs = catBradford(image_XYZs, XYZ_D65, XYZ_D50);
